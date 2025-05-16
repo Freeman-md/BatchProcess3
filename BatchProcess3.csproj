@@ -19,4 +19,13 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets\Images\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Images\logo.svg" />
+      <AvaloniaResource Include="Assets\Images\logo.svg" />
+    </ItemGroup>
 </Project>
