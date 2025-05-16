@@ -2,11 +2,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
+        Width="1024" Height="600"
         x:Class="BatchProcess3.MainWindow"
         Title="BatchProcess3">
     
-        <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="200, *">
-                
+        <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
+                <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
+                      <Grid RowDefinitions="*, Auto">
+                          <StackPanel Spacing="12">
+                              <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="220"></Image>
+                              
+                              <Button Content="Home" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Process" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Actions" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Macros" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Reporter" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="History" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                          </StackPanel>
+                          
+                          <Button Grid.Row="1" Content="Settings" Foreground="White" Background="LightBlue"></Button>
+                      </Grid>  
+                </Border>
         </Grid>
 </Window>
