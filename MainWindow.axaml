@@ -13,12 +13,12 @@
                           <StackPanel Spacing="12">
                               <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="220"></Image>
                               
-                              <Button Content="Home" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                              <Button Content="Process" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                              <Button Content="Actions" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                              <Button Content="Macros" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                              <Button Content="Reporter" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                              <Button Content="History" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Home" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Process" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Actions" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Macros" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="Reporter" HorizontalAlignment="Stretch"></Button>
+                              <Button Content="History" HorizontalAlignment="Stretch"></Button>
                           </StackPanel>
                           
                           <Button Grid.Row="1" Content="Settings" Foreground="White" Background="LightBlue"></Button>
