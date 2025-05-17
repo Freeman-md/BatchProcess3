@@ -9,6 +9,7 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty]
     private bool _sideMenuExpanded = true;
 
+
     [RelayCommand]
     private void SideMenuResized()
     {

@@ -80,6 +80,14 @@
         <Setter Property="Background" Value="Transparent"></Setter>
     </Style>
     
+    <Style Selector="Border">
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Property="Width" Duration="0:0:1"></DoubleTransition>
+            </Transitions>
+        </Setter>
+    </Style>
+    
     <Style Selector="Button.transparent Label.icon-only">
         <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
     </Style>
