@@ -18,7 +18,8 @@
                 <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
                       <Grid RowDefinitions="*, Auto">
                           <StackPanel Spacing="12">
-                              <Image PointerPressed="InputElement_OnPointerPressed" Source="{Binding SideMenuImage}" Width="220"></Image>
+                              <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/logo.svg}" Width="220" IsVisible="{Binding SideMenuExpanded}"></Image>
+                              <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/icon.svg}" Width="22" IsVisible="{Binding !SideMenuExpanded}"></Image>
                               
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
