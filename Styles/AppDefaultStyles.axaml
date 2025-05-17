@@ -57,6 +57,20 @@
         <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
     </Style>
     
+    <Style Selector="Button /template/ ContentPresenter">
+        <Setter Property="Transitions" >
+            <Transitions>
+                <BrushTransition Property="Foreground" Duration="0:0:0.1"></BrushTransition>
+                <BrushTransition Property="Background" Duration="0:0:0.1"></BrushTransition>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"></TransformOperationsTransition>
+            </Transitions>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
+        <Setter Property="RenderTransform" Value="scale(1.1)" ></Setter>
+    </Style>
+    
     <Style Selector="Button:pointerover /template/ ContentPresenter">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}"></Setter>
         <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}"></Setter>
@@ -64,6 +78,10 @@
     
     <Style Selector="Button.transparent">
         <Setter Property="Background" Value="Transparent"></Setter>
+    </Style>
+    
+    <Style Selector="Button.transparent Label.icon-only">
+        <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
     </Style>
     
     <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
