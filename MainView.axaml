@@ -5,9 +5,16 @@
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         Width="1024" Height="600"
         x:Class="BatchProcess3.MainView"
-        Title="BatchProcess3">
+        xmlns:vm="clr-namespace:BatchProcess3.ViewModels"
+        x:DataType="vm:MainViewModel"
+        Title="BatchProcess3"
+        >
     
-        <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
+    <Window.DataContext>
+        <vm:MainViewModel></vm:MainViewModel>
+    </Window.DataContext>
+    
+    <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
                 <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
                       <Grid RowDefinitions="*, Auto">
                           <StackPanel Spacing="12">
@@ -17,7 +24,7 @@
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe2c2;"></Label>
                                       
-                                      <Label Classes="akko" Content="Home"></Label>
+                                      <Label Classes="akko" Content="{Binding Test}"></Label>
                                   </StackPanel>
                               </Button>
                               <Button HorizontalAlignment="Stretch">
