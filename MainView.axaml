@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         Width="1024" Height="600"
-        x:Class="BatchProcess3.MainWindow"
+        x:Class="BatchProcess3.MainView"
         Title="BatchProcess3">
     
         <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
