@@ -10,6 +10,10 @@
         Title="BatchProcess3"
         >
     
+    <Design.DataContext>
+        <vm:MainViewModel></vm:MainViewModel>
+    </Design.DataContext>
+    
     <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
                 <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
                       <Grid RowDefinitions="*, Auto">
