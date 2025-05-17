@@ -13,7 +13,13 @@
                           <StackPanel Spacing="12">
                               <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="220"></Image>
                               
-                              <Button Content="Home" HorizontalAlignment="Stretch"></Button>
+                              <Button HorizontalAlignment="Stretch">
+                                  <StackPanel Orientation="Horizontal">
+                                      <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="22"></Image>
+                                      
+                                      <Label Content="Home"></Label>
+                                  </StackPanel>
+                              </Button>
                               <Button Content="Process" HorizontalAlignment="Stretch"></Button>
                               <Button Content="Actions" HorizontalAlignment="Stretch"></Button>
                               <Button Content="Macros" HorizontalAlignment="Stretch"></Button>
