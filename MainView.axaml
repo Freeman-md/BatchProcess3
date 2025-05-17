@@ -18,48 +18,48 @@
                 <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
                       <Grid RowDefinitions="*, Auto">
                           <StackPanel Spacing="12">
-                              <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="220"></Image>
+                              <Image PointerPressed="InputElement_OnPointerPressed" Source="{Binding SideMenuImage}" Width="220"></Image>
                               
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe2c2;"></Label>
                                       
-                                      <Label Classes="akko" Content="{Binding Test}"></Label>
+                                      <Label Classes="akko" Content="Home" IsVisible="{Binding SideMenuExpanded}"></Label>
                                   </StackPanel>
                               </Button>
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe346;"></Label>
                                       
-                                      <Label Classes="akko" Content="Process"></Label>
+                                      <Label Classes="akko" Content="Process" IsVisible="{Binding SideMenuExpanded}"></Label>
                                   </StackPanel>
                               </Button>
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe7f2;"></Label>
                                       
-                                      <Label Classes="akko" Content="Actions"></Label>
+                                      <Label Classes="akko" Content="Actions" IsVisible="{Binding SideMenuExpanded}"></Label>
                                   </StackPanel>
                               </Button>
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe3ee;"></Label>
                                       
-                                      <Label Classes="akko" Content="Macros"></Label>
+                                      <Label Classes="akko" Content="Macros" IsVisible="{Binding SideMenuExpanded}"></Label>
                                   </StackPanel>
                               </Button>
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xeb7a;"></Label>
                                       
-                                      <Label Classes="akko" Content="Reporter"></Label>
+                                      <Label Classes="akko" Content="Reporter" IsVisible="{Binding SideMenuExpanded}"></Label>
                                   </StackPanel>
                               </Button>
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe03a;"></Label>
                                       
-                                      <Label Classes="akko" Content="History"></Label>
+                                      <Label Classes="akko" Content="History" IsVisible="{Binding SideMenuExpanded}"></Label>
 
                                   </StackPanel>
                               </Button>
