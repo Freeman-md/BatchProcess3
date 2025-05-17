@@ -7,6 +7,10 @@
             <Button  Content="Hello World"></Button>
         </Border>
     </Design.PreviewWith>
+    
+    <Style Selector="Window">
+        <Setter Property="FontFamily" Value="{DynamicResource AkkoPro}"></Setter>
+    </Style>
 
     <!-- Add Styles Here -->
     <Style Selector="Button">
