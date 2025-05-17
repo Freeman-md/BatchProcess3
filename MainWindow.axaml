@@ -15,7 +15,7 @@
                               
                               <Button HorizontalAlignment="Stretch">
                                   <StackPanel Orientation="Horizontal">
-                                      <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="22"></Image>
+                                      <Label FontFamily="{DynamicResource PhosphorFill}" Classes="Icon" Content="&#xe2c2;"></Label>
                                       
                                       <Label Content="Home"></Label>
                                   </StackPanel>
