@@ -24,5 +24,17 @@ public partial class MainViewModel : ViewModelBase
     {
         SideMenuExpanded = !SideMenuExpanded;
     }
+
+    [RelayCommand]
+    private void GoToHome()
+    {
+        CurrentPage = _homePage;
+    }
+    
+    [RelayCommand]
+    private void GoToProcess()
+    {
+        CurrentPage = _processPage;
+    }
     
 }

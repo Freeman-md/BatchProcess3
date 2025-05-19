@@ -8,5 +8,5 @@
              x:Class="BatchProcess3.Views.ProcessPageView">
     <Design.DataContext><vm:ProcessPageViewModel></vm:ProcessPageViewModel></Design.DataContext>
     
-    Welcome to Avalonia!
+    Welcome to the Process Page!
 </UserControl>
