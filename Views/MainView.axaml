@@ -26,14 +26,14 @@
                               <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/logo.svg}" Width="220" IsVisible="{Binding SideMenuExpanded}"></Image>
                               <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/icon.svg}" Width="22" IsVisible="{Binding !SideMenuExpanded}"></Image>
                               
-                              <Button HorizontalAlignment="Stretch" Command="{Binding GoToHomeCommand}">
+                              <Button HorizontalAlignment="Stretch" Command="{Binding GoToHomeCommand}" Classes.active="{Binding HomePageIsActive}">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe2c2;"></Label>
                                       
                                       <Label Classes="akko" Content="Home" IsVisible="{Binding SideMenuExpanded}"></Label>
                                   </StackPanel>
                               </Button>
-                              <Button HorizontalAlignment="Stretch" Command="{Binding GoToProcessCommand}">
+                              <Button HorizontalAlignment="Stretch" Command="{Binding GoToProcessCommand}" Classes.active="{Binding ProcessPageIsActive}">
                                   <StackPanel Orientation="Horizontal">
                                       <Label Classes="icon" Content="&#xe346;"></Label>
                                       

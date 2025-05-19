@@ -6,10 +6,17 @@ namespace BatchProcess3.ViewModels;
 
 public partial class MainViewModel : ViewModelBase
 {
+    private const string buttonActiveClass = "active";
+    
     [ObservableProperty]
     private bool _sideMenuExpanded = true;
 
-    [ObservableProperty] private ViewModelBase _currentPage;
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(HomePageIsActive))]
+    [NotifyPropertyChangedFor(nameof(ProcessPageIsActive))]
+    private ViewModelBase _currentPage;
+    public bool HomePageIsActive => CurrentPage == _homePage;
+    public bool ProcessPageIsActive => CurrentPage == _processPage;
 
     private readonly HomePageViewModel _homePage = new();
     private readonly ProcessPageViewModel _processPage = new();
