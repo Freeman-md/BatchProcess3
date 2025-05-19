@@ -4,8 +4,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         Width="1024" Height="600"
-        x:Class="BatchProcess3.MainView"
+        x:Class="BatchProcess3.Views.MainView"
         xmlns:vm="clr-namespace:BatchProcess3.ViewModels"
+        xmlns:views="clr-namespace:BatchProcess3.Views"
         x:DataType="vm:MainViewModel"
         Title="BatchProcess3"
         >
@@ -15,7 +16,13 @@
     </Design.DataContext>
     
     <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
-                <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
+        
+        
+        <ContentControl Grid.Column="1">
+            <views:HomePageView></views:HomePageView>
+        </ContentControl>
+        
+        <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
                       <Grid RowDefinitions="*, Auto">
                           <StackPanel Spacing="12">
                               <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/logo.svg}" Width="220" IsVisible="{Binding SideMenuExpanded}"></Image>

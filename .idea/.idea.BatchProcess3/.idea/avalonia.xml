@@ -7,6 +7,9 @@
         <entry key="MainView.axaml" value="BatchProcess3.csproj" />
         <entry key="MainWindow.axaml" value="BatchProcess3.csproj" />
         <entry key="Styles/AppDefaultStyles.axaml" value="BatchProcess3.csproj" />
+        <entry key="Views/HomePageView.axaml" value="BatchProcess3.csproj" />
+        <entry key="Views/MainView.axaml" value="BatchProcess3.csproj" />
+        <entry key="Views/ProcessPageView.axaml" value="BatchProcess3.csproj" />
       </map>
     </option>
   </component>

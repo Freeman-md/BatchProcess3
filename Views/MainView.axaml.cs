@@ -2,7 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Input;
 using BatchProcess3.ViewModels;
 
-namespace BatchProcess3;
+namespace BatchProcess3.Views;
 
 public partial class MainView : Window
 {

@@ -39,4 +39,11 @@
       <None Remove="Assets\Images\icon.svg" />
       <AvaloniaResource Include="Assets\Images\icon.svg" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\MainView.axaml.cs">
+        <DependentUpon>MainView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>
