@@ -9,6 +9,15 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty]
     private bool _sideMenuExpanded = true;
 
+    [ObservableProperty] private ViewModelBase _currentPage;
+
+    private readonly HomePageViewModel _homePage = new();
+    private readonly ProcessPageViewModel _processPage = new();
+
+    public MainViewModel()
+    {
+        CurrentPage = _homePage;
+    }
 
     [RelayCommand]
     private void SideMenuResized()

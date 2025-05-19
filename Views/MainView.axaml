@@ -18,9 +18,7 @@
     <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
         
         
-        <ContentControl Grid.Column="1">
-            <views:HomePageView></views:HomePageView>
-        </ContentControl>
+        <ContentControl Grid.Column="1" Content="{Binding CurrentPage}" />
         
         <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
                       <Grid RowDefinitions="*, Auto">
