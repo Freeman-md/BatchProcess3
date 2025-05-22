@@ -3,6 +3,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using BatchProcess3.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace BatchProcess3;
 
@@ -20,6 +21,7 @@ public partial class App : Application
         var collection = new ServiceCollection();
 
         collection.AddSingleton<MainViewModel>();
+        collection.AddSingleton<HomePageViewModel>();
         
         var services = collection.BuildServiceProvider();
         

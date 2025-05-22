@@ -37,7 +37,7 @@ public partial class MainViewModel : ViewModelBase
     private readonly HistoryPageViewModel _historyPage = new();
     private readonly SettingsPageViewModel _settingsPage = new();
 
-    public MainViewModel()
+    public MainViewModel(HomePageViewModel homePage)
     {
         CurrentPage = _homePage;
     }
