@@ -1,6 +1,11 @@
+using BatchProcess3.Data;
+
 namespace BatchProcess3.ViewModels;
 
-public class HistoryPageViewModel : ViewModelBase
+public class HistoryPageViewModel : PageViewModel
 {
-    public string Title { get; set; } = "History";
+    public HistoryPageViewModel()
+    {
+        PageName = ApplicationPageNames.History;
+    }
 }

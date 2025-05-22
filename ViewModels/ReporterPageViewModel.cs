@@ -1,6 +1,11 @@
+using BatchProcess3.Data;
+
 namespace BatchProcess3.ViewModels;
 
-public class ReporterPageViewModel : ViewModelBase
+public class ReporterPageViewModel : PageViewModel
 {
-    public string Title { get; set; } = "Reporter";
+    public ReporterPageViewModel()
+    {
+        PageName = ApplicationPageNames.Reporter;
+    }
 }

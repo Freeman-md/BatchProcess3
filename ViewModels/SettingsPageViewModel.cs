@@ -1,6 +1,11 @@
+using BatchProcess3.Data;
+
 namespace BatchProcess3.ViewModels;
 
-public class SettingsPageViewModel : ViewModelBase
+public class SettingsPageViewModel : PageViewModel
 {
-    public string Title { get; set; } = "Settings";
+    public SettingsPageViewModel()
+    {
+        PageName = ApplicationPageNames.Settings;
+    }
 }

@@ -1,6 +1,11 @@
+using BatchProcess3.Data;
+
 namespace BatchProcess3.ViewModels;
 
-public class MacrosPageViewModel : ViewModelBase
+public class MacrosPageViewModel : PageViewModel
 {
-    public string Title { get; set; } = "Macros";
+    public MacrosPageViewModel()
+    {
+        PageName = ApplicationPageNames.Macros;
+    }
 }

@@ -1,4 +1,6 @@
 using Avalonia.Svg.Skia;
+using BatchProcess3.Data;
+using BatchProcess3.Factories;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -7,6 +9,8 @@ namespace BatchProcess3.ViewModels;
 public partial class MainViewModel : ViewModelBase
 {
     private const string buttonActiveClass = "active";
+    
+    private PageFactory _pageFactory;
     
     [ObservableProperty]
     private bool _sideMenuExpanded = true;
@@ -19,41 +23,20 @@ public partial class MainViewModel : ViewModelBase
     [NotifyPropertyChangedFor(nameof(ReporterPageIsActive))]
     [NotifyPropertyChangedFor(nameof(HistoryPageIsActive))]
     [NotifyPropertyChangedFor(nameof(SettingsPageIsActive))]
-    private ViewModelBase _currentPage;
-    public bool HomePageIsActive => CurrentPage == _homePage;
-    public bool ProcessPageIsActive => CurrentPage == _processPage;
-    public bool ActionsPageIsActive => CurrentPage == _actionsPage;
-    public bool MacrosPageIsActive => CurrentPage == _macrosPage;
-    public bool ReporterPageIsActive => CurrentPage == _reporterPage;
-    public bool HistoryPageIsActive => CurrentPage == _historyPage;
-    public bool SettingsPageIsActive => CurrentPage == _settingsPage;
-    
-    private readonly HomePageViewModel _homePage;
-    private readonly ProcessPageViewModel _processPage;
-    private readonly ActionsPageViewModel _actionsPage;
-    private readonly MacrosPageViewModel _macrosPage;
-    private readonly ReporterPageViewModel _reporterPage;
-    private readonly HistoryPageViewModel _historyPage;
-    private readonly SettingsPageViewModel _settingsPage;
+    private PageViewModel _currentPage;
+    public bool HomePageIsActive => CurrentPage.PageName == ApplicationPageNames.Home;
+    public bool ProcessPageIsActive => CurrentPage.PageName == ApplicationPageNames.Process;
+    public bool ActionsPageIsActive => CurrentPage.PageName == ApplicationPageNames.Actions;
+    public bool MacrosPageIsActive => CurrentPage.PageName == ApplicationPageNames.Macros;
+    public bool ReporterPageIsActive => CurrentPage.PageName == ApplicationPageNames.Reporter;
+    public bool HistoryPageIsActive => CurrentPage.PageName == ApplicationPageNames.History;
+    public bool SettingsPageIsActive => CurrentPage.PageName == ApplicationPageNames.Settings;
 
-    public MainViewModel(
-        HomePageViewModel homePage,
-        ProcessPageViewModel processPage,
-        ActionsPageViewModel actionsPage,
-        MacrosPageViewModel macrosPage,
-        ReporterPageViewModel reporterPage,
-        HistoryPageViewModel historyPage,
-        SettingsPageViewModel settingsPage)
+    public MainViewModel(PageFactory pageFactory)
     {
-        _homePage = homePage;
-        _processPage = processPage;
-        _actionsPage = actionsPage;
-        _macrosPage = macrosPage;
-        _reporterPage = reporterPage;
-        _historyPage = historyPage;
-        _settingsPage = settingsPage;
+        _pageFactory = pageFactory;
         
-        CurrentPage = _homePage;
+        GoToHome();
     }
 
     [RelayCommand]
@@ -65,43 +48,43 @@ public partial class MainViewModel : ViewModelBase
     [RelayCommand]
     private void GoToHome()
     {
-        CurrentPage = _homePage;
+        CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Home);
     }
     
     [RelayCommand]
     private void GoToProcess()
     {
-        CurrentPage = _processPage;
+        CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Process);
     }
     
     [RelayCommand]
     private void GoToActions()
     {
-        CurrentPage = _actionsPage;
+        CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Actions);
     }
 
     [RelayCommand]
     private void GoToMacros()
     {
-        CurrentPage = _macrosPage;
+        CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Macros);
     }
 
     [RelayCommand]
     private void GoToReporter()
     {
-        CurrentPage = _reporterPage;
+        CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Reporter);
     }
 
     [RelayCommand]
     private void GoToHistory()
     {
-        CurrentPage = _historyPage;
+        CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.History);
     }
 
     [RelayCommand]
     private void GoToSettings()
     {
-        CurrentPage = _settingsPage;
+        CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Settings);
     }
     
 }
