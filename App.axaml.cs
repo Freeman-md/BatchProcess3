@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using BatchProcess3.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BatchProcess3;
 
@@ -16,11 +17,17 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        var collection = new ServiceCollection();
+
+        collection.AddSingleton<MainViewModel>();
+        
+        var services = collection.BuildServiceProvider();
+        
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new Views.MainView
             {
-                DataContext = new MainViewModel()
+                DataContext = services.GetRequiredService<MainViewModel>()
             };
         }
 
