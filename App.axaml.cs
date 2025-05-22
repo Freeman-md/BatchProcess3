@@ -22,6 +22,12 @@ public partial class App : Application
 
         collection.AddSingleton<MainViewModel>();
         collection.AddSingleton<HomePageViewModel>();
+        collection.AddSingleton<ProcessPageViewModel>();
+        collection.AddSingleton<ActionsPageViewModel>();
+        collection.AddSingleton<MacrosPageViewModel>();
+        collection.AddSingleton<HistoryPageViewModel>();
+        collection.AddSingleton<ReporterPageViewModel>();
+        collection.AddSingleton<SettingsPageViewModel>();
         
         var services = collection.BuildServiceProvider();
         

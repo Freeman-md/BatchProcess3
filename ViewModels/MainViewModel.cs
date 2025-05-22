@@ -28,17 +28,31 @@ public partial class MainViewModel : ViewModelBase
     public bool HistoryPageIsActive => CurrentPage == _historyPage;
     public bool SettingsPageIsActive => CurrentPage == _settingsPage;
     
+    private readonly HomePageViewModel _homePage;
+    private readonly ProcessPageViewModel _processPage;
+    private readonly ActionsPageViewModel _actionsPage;
+    private readonly MacrosPageViewModel _macrosPage;
+    private readonly ReporterPageViewModel _reporterPage;
+    private readonly HistoryPageViewModel _historyPage;
+    private readonly SettingsPageViewModel _settingsPage;
 
-    private readonly HomePageViewModel _homePage = new();
-    private readonly ProcessPageViewModel _processPage = new();
-    private readonly ActionsPageViewModel _actionsPage = new();
-    private readonly MacrosPageViewModel _macrosPage = new();
-    private readonly ReporterPageViewModel _reporterPage = new();
-    private readonly HistoryPageViewModel _historyPage = new();
-    private readonly SettingsPageViewModel _settingsPage = new();
-
-    public MainViewModel(HomePageViewModel homePage)
+    public MainViewModel(
+        HomePageViewModel homePage,
+        ProcessPageViewModel processPage,
+        ActionsPageViewModel actionsPage,
+        MacrosPageViewModel macrosPage,
+        ReporterPageViewModel reporterPage,
+        HistoryPageViewModel historyPage,
+        SettingsPageViewModel settingsPage)
     {
+        _homePage = homePage;
+        _processPage = processPage;
+        _actionsPage = actionsPage;
+        _macrosPage = macrosPage;
+        _reporterPage = reporterPage;
+        _historyPage = historyPage;
+        _settingsPage = settingsPage;
+        
         CurrentPage = _homePage;
     }
 
